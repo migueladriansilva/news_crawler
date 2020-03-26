@@ -6,4 +6,6 @@ from engine.data_extractor import df
 
 filtered_df = filter_results(df)
 
-save_file(filtered_df)
+save_file(df, 'data.txt')
+
+save_file(filtered_df, 'filtered.txt')

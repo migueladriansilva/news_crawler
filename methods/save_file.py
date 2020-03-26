@@ -1,8 +1,7 @@
 import os
 
 
-def save_file(df):
-    path = 'data.txt'
+def save_file(df, path):
 
     if os.path.isfile(path):
         open(path, 'w').close()
