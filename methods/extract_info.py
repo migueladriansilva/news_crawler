@@ -27,3 +27,6 @@ def extract_score_comments(subtext):
         else:
             comments.append(None)
     return score, comments
+
+
+

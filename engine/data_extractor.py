@@ -1,8 +1,7 @@
 import requests
-import pandas as pd
 
 from bs4 import BeautifulSoup
-from general_methods import *
+from methods.extract_info import *
 
 
 r = requests.get('https://news.ycombinator.com/')
@@ -22,8 +21,5 @@ score, comments = extract_score_comments(subtext)
 # Merge results into a list of tuples
 results = list(zip(rank, title, score, comments))
 
-print(results)
-
-
 df = pd.DataFrame(results, columns=['Number of order', 'Title', 'Points', 'Amount of comments'])
-print(df)
+
